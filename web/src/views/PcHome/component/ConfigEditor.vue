@@ -355,9 +355,19 @@ onMounted(() => {
                 :key="setting.key" 
                 :label="setting.label"
               >
+                <!-- Text input for non-boolean settings -->
                 <n-input 
+                  v-if="!['True', 'False'].includes(setting.value)" 
                   v-model:value="setting.value" 
                   :placeholder="setting.label"
+                />
+                
+                <!-- Switch for boolean settings -->
+                <n-switch 
+                  v-else 
+                  v-model:value="setting.value" 
+                  :checked-value="'True'" 
+                  :unchecked-value="'False'"
                 />
               </n-form-item>
             </div>
@@ -370,9 +380,19 @@ onMounted(() => {
                 :key="setting.key" 
                 :label="setting.label"
               >
+                <!-- Text input for non-boolean settings -->
                 <n-input 
+                  v-if="!['True', 'False'].includes(setting.value)" 
                   v-model:value="setting.value" 
                   :placeholder="setting.label"
+                />
+                
+                <!-- Switch for boolean settings -->
+                <n-switch 
+                  v-else 
+                  v-model:value="setting.value" 
+                  :checked-value="'True'" 
+                  :unchecked-value="'False'"
                 />
               </n-form-item>
             </div>
@@ -385,9 +405,19 @@ onMounted(() => {
                 :key="setting.key" 
                 :label="setting.label"
               >
+                <!-- Text input for non-boolean settings -->
                 <n-input 
+                  v-if="!['True', 'False'].includes(setting.value)" 
                   v-model:value="setting.value" 
                   :placeholder="setting.label"
+                />
+                
+                <!-- Switch for boolean settings -->
+                <n-switch 
+                  v-else 
+                  v-model:value="setting.value" 
+                  :checked-value="'True'" 
+                  :unchecked-value="'False'"
                 />
               </n-form-item>
             </div>
